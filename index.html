@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Me</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="scripts.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+  <!--Title-->
+  <h2>Contact Me</h2>
+  <div id="error_message"></div>
+  <!--Validate form using JavaScript once user clicks on submit button-->
+  <form id="myform" onsubmit="return validate();" action="success.html">
+  <!--Group General Fields together-->
+    <fieldset class="fieldset">
+    <legend>  General Fields  </legend>
+    <div class="input_field">
+      <input type="text" placeholder="First Name" id="firstName">
+    </div>
+    <div class="input_field">
+      <input type="text" placeholder="Middle Name" id="middleName">
+    </div>
+    <div class="input_field">
+      <input type="text" placeholder="Last Name" id="lastName">
+    </div>
+    <div class="input_field">
+      Birthday : <input type="date" id="birthday" onchange="checkDate()" data-date-format="yyyy-mm-dd">
+    </div>
+    <div class="input_field">
+      <input type="text" placeholder="Phone" id="phone">
+    </div>
+  </fieldset>
+    <!--Group Address Fields together-->
+  <fieldset class="fieldset">
+    <legend>       Address Fields  </legend>
+    <div class="input_field">
+      <input type="text" placeholder="Street Address 1" id="address1">
+    </div>
+    <div class="input_field">
+      <input type="text" placeholder="Street Address 2" id="address2">
+    </div>
+    <div class="input_field">
+      <input type="text" placeholder="City" id="city">
+    </div>  
+    <div class="input_field">
+      Select your State:
+    <select id = "state" name="state">
+      <option value="" selected disabled hidden>State</option>
+      <option value="Connecticut">Connecticut</option>
+      <option value="Maine">Maine</option>
+      <option value="Massachusetts">Massachusetts</option>
+      <option value="New Hampshire">New Hampshire</option>
+      <option value="Rhode Island">Rhode Island</option>
+      <option value="Vermont">Vermont</option>
+    </select>
+    </div>
+    <div class="input_field">
+      <input type="text" placeholder="Zip Code" id="zipcode">
+    </div>  
+  </fieldset> 
+    <div class="btn">
+        <input type="submit">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
